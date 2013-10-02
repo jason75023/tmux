@@ -1,0 +1,8 @@
+#!/bin/bash
+tmux new -d -s cass
+tmux neww -k -t cass:1 -n 'cass1'
+tmux neww -k -t cass:2 -n 'cass2'
+tmux neww -k -t cass:3 -n 'cass3'
+tmux send-keys -t cass1 "ssh 10.1.168.16" C-m
+tmux send-keys -t cass2 "ssh 10.1.168.15" C-m
+tmux send-keys -t cass3 "ssh 10.1.168.24" C-m
