@@ -1,0 +1,6 @@
+#!/bin/bash
+tmux new -d -s mr
+tmux neww -k -t mr:1 -n 'mr1'
+tmux neww -k -t mr:2 -n 'mr2'
+tmux send-keys -t mr1 "ssh 10.1.168.7" C-m
+tmux send-keys -t mr2 "ssh 10.1.168.12" C-m
